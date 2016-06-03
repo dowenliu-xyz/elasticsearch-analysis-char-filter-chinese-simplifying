@@ -28,7 +28,7 @@
             <useProjectArtifact>true</useProjectArtifact>
             <useTransitiveFiltering>true</useTransitiveFiltering>
             <includes>
-                <include>xyz.dowenliu.npl:lucene-char-filter-chinese-simplifying</include>
+                <include>xyz.dowenwork.npl:lucene-char-filter-chinese-simplifying</include>
             </includes>
         </dependencySet>
         <dependencySet>
