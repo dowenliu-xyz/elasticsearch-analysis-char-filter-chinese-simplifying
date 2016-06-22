@@ -20,11 +20,11 @@ public class ChineseSimplifyingAnalysis extends AbstractComponent {
     @Inject
     public ChineseSimplifyingAnalysis(Settings settings, IndicesAnalysisService indicesAnalysisService) {
         super(settings);
-        indicesAnalysisService.charFilterFactories().put("sbc2dbc", new PreBuiltCharFilterFactoryFactory(
+        indicesAnalysisService.charFilterFactories().put("chinese-simplifying", new PreBuiltCharFilterFactoryFactory(
                 new CharFilterFactory() {
                     @Override
                     public String name() {
-                        return "sbc2dbc";
+                        return "chinese-simplifying";
                     }
 
                     @Override
