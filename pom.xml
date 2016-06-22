@@ -6,7 +6,7 @@
 
     <groupId>xyz.dowenwork.npl</groupId>
     <artifactId>elasticsearch-analysis-char-filter-chinese-simplifying</artifactId>
-    <version>2.3.3.2</version>
+    <version>2.3.3.3-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>繁体转简体charFilter ES支持</description>
 
