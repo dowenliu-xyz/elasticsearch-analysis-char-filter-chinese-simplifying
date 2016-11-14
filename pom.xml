@@ -6,7 +6,7 @@
 
     <groupId>xyz.dowenwork.npl</groupId>
     <artifactId>elasticsearch-analysis-char-filter-chinese-simplifying</artifactId>
-    <version>2.4.0.0</version>
+    <version>5.0.0.0</version>
     <packaging>jar</packaging>
     <description>繁体转简体charFilter ES支持</description>
 
@@ -22,15 +22,12 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dependency.junit.version>4.12</dependency.junit.version>
-        <dependency.char-filter-chinese-simplifying.version>5.5.2.0</dependency.char-filter-chinese-simplifying.version>
-        <elasticsearch.version>2.4.0</elasticsearch.version>
+        <dependency.char-filter-chinese-simplifying.version>6.2.0.1</dependency.char-filter-chinese-simplifying.version>
+        <elasticsearch.version>5.0.0</elasticsearch.version>
         <dependency.randomizedtesting.version>2.3.4</dependency.randomizedtesting.version>
         <elasticsearch.plugin.name>elasticsearch-analysis-char-filter-chinese-simplifying</elasticsearch.plugin.name>
         <elasticsearch.plugin.classname>xyz.dowenwork.elasticsearch.plugin.AnalysisChineseSimplifyingPlugin</elasticsearch.plugin.classname>
-        <elasticsearch.plugin.jvm>true</elasticsearch.plugin.jvm>
-        <elasticsearch.plugin.site>false</elasticsearch.plugin.site>
-        <maven.compiler.target>1.7</maven.compiler.target>
-        <elasticsearch.plugin.isolated/>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -73,8 +70,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
