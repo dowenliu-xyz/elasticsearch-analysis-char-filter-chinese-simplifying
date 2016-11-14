@@ -27,10 +27,7 @@
         <dependency.randomizedtesting.version>2.3.4</dependency.randomizedtesting.version>
         <elasticsearch.plugin.name>elasticsearch-analysis-char-filter-chinese-simplifying</elasticsearch.plugin.name>
         <elasticsearch.plugin.classname>xyz.dowenwork.elasticsearch.plugin.AnalysisChineseSimplifyingPlugin</elasticsearch.plugin.classname>
-        <elasticsearch.plugin.jvm>true</elasticsearch.plugin.jvm>
-        <elasticsearch.plugin.site>false</elasticsearch.plugin.site>
-        <maven.compiler.target>1.7</maven.compiler.target>
-        <elasticsearch.plugin.isolated/>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
