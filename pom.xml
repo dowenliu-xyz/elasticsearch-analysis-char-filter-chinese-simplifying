@@ -22,7 +22,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dependency.junit.version>4.12</dependency.junit.version>
-        <dependency.char-filter-chinese-simplifying.version>6.2.0.0</dependency.char-filter-chinese-simplifying.version>
+        <dependency.char-filter-chinese-simplifying.version>6.2.0.1</dependency.char-filter-chinese-simplifying.version>
         <elasticsearch.version>5.0.0</elasticsearch.version>
         <dependency.randomizedtesting.version>2.3.4</dependency.randomizedtesting.version>
         <elasticsearch.plugin.name>elasticsearch-analysis-char-filter-chinese-simplifying</elasticsearch.plugin.name>
