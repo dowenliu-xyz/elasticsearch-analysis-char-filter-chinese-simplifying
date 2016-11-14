@@ -1,13 +1,13 @@
 package xyz.dowenwork.elasticsearch.plugin;
 
-import org.elasticsearch.common.inject.Module;
-import org.elasticsearch.index.analysis.AnalysisModule;
+import org.elasticsearch.index.analysis.CharFilterFactory;
+import org.elasticsearch.indices.analysis.AnalysisModule;
+import org.elasticsearch.plugins.AnalysisPlugin;
 import org.elasticsearch.plugins.Plugin;
-import xyz.dowenwork.elasticsearch.index.analysis.ChineseSimplifyingAnalysisBinderProcessor;
-import xyz.dowenwork.elasticsearch.indices.analysis.ChineseSimplifyingAnalysisModule;
+import xyz.dowenwork.elasticsearch.index.analysis.ChineseSimplifyingCharFilterFactory;
 
-import java.util.Collection;
-import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>create at 16-6-2</p>
@@ -16,26 +16,17 @@ import java.util.Collections;
  * @since 2.3.3.0
  */
 @SuppressWarnings("unused")
-public class AnalysisChineseSimplifyingPlugin extends Plugin {
-    @Override
-    public String name() {
-        return "analysis-sbc2dbc";
-    }
+public class AnalysisChineseSimplifyingPlugin extends Plugin implements AnalysisPlugin {
+    public static final String PLUGIN_NAME = "analysis-sbc2dbc";
 
     @Override
-    public String description() {
-        return "全角字符转半角字符";
-    }
+    public Map<String, AnalysisModule.AnalysisProvider<CharFilterFactory>> getCharFilters() {
+        Map<String, AnalysisModule.AnalysisProvider<CharFilterFactory>> factories = new HashMap<>();
 
-    @Override
-    public Collection<Module> nodeModules() {
-        return Collections.<Module>singletonList(new ChineseSimplifyingAnalysisModule());
-    }
+        factories.put("chinese-simplifying",
+                (indexSettings, environment, name, settings) ->
+                        new ChineseSimplifyingCharFilterFactory(indexSettings, name));
 
-    /**
-     * Automatically called with the analysis module.
-     */
-    public void onModule(AnalysisModule module) {
-        module.addProcessor(new ChineseSimplifyingAnalysisBinderProcessor());
+        return factories;
     }
 }
